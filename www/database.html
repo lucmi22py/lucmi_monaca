@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+    <script>
+        //
+        // TODO: Write JavaScript code here
+        //
+    </script>
+</head>
+<body>
+<script>
+    function shuffle(array) {
+  var n = array.length, t, i;
+
+  while (n) {
+    i = Math.floor(Math.random() * n--);
+    t = array[n];
+    array[n] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
+var test_array = ["hello", 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var test_array2 = ["I","am","student","in","Shimane","University"];
+shuffle(test_array2);
+document.write(test_array2)
+</script>
+
+</body>
+</html>

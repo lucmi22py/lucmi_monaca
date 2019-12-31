@@ -1,0 +1,32 @@
+.mainloc {
+    top: 100px;
+    position: fixed;
+    font-size: 180%;
+}
+
+
+.study {
+    width: 150px;
+    height: 150px;
+    margin: 10px
+}
+.record {
+    width: 150px;
+    height: 150px;
+    margin: 10px
+}
+.config {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.nextpage {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color: #c65840;
+}
+
+.japanesebunn{
+    align-content: 
+}

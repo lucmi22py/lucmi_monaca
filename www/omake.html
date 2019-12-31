@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			font-family: "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
+		}
+		.container > * {
+			width: 100%;
+			margin: 0 auto;
+		}
+		.center {
+			text-align: center;
+		}
+		span.btn {
+			display: inline-block;
+			height: 40px;
+			width: 80%;
+			padding-top: 11px;
+			background-color: #EEE;
+			color: #555;
+			border-radius: 8px;
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 140%;
+			font-weight: bold;
+		}
+		span.btn.tall {
+			height: 80px;
+			padding-top: 45px;
+		}
+		span.btn.primary {
+			background-color: #c65840;
+			color: #fff;
+		}
+		span.btn.hover {
+			background-color: #ccc;
+		}
+		span.btn.primary.hover {
+			background-color: #B34F37;
+		}
+		.footer {
+			position: fixed;
+			bottom: 5px;
+		}
+
+		#disp {
+			font-size: 500%;
+			padding-top: 13%;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div id="disp" class="center"></div>
+	<div class="footer center">
+		<span class="btn primary tall" id="countUp">タップ</span>
+		<span class="btn" id="reset">リセット</span>
+	</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var c = 0;
+    $("#disp").text(c);
+	$(".btn").on('touchstart', function(){
+		$(this).addClass('hover');
+	});
+	$(".btn").on('touchend', function(){
+		$(this).removeClass('hover');
+		$(this).trigger('touched');
+	});
+	$("#countUp").on('touched',function(){
+		$("#disp").text(++c);
+	});
+	$("#reset").on('touched',function(){
+		c = 0;
+		$("#disp").html(c);
+	});
+</script>
+</body>
+</html>
